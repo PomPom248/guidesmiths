@@ -6,6 +6,7 @@ const phoneSchema = new Schema({
     model: String,
     brand: String,
     firstRelease: String,
+    image: String,
     dimensions: {
         height: String,
         width: String,

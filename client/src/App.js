@@ -5,7 +5,7 @@ import IndexCard from './Components/IndexCard';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='App'>
         <IndexCard />
       </div>
     );

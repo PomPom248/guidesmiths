@@ -31,3 +31,71 @@
     transform: rotate(360deg);
   }
 }
+.searchbox-input{
+  border: 2px solid #36D7B7;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.phone-display{
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+}
+.each-phone{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 8px 7px 15px #888888;
+  height: 17rem;
+}
+.individual-image{
+  object-fit: contain;
+  width: 30%;
+}
+.learn-more-btn{
+  border-radius: 1rem;
+  background-color: #36D7B7;
+  color: white;
+  font-size: 1.2rem;
+  border: transparent;
+  font-weight: 600;
+  box-shadow: 5px 5px 15px #888888;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem;
+}
+.learn-more-btn:hover{
+  background-color: white;
+  color: #36D7B7;
+  border:#36D7B7 2px solid;
+  margin: 0.4rem;
+}
+span{
+  font-weight: bold;
+}
+.flex-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-name-modal{
+  text-align: center;
+}
+.modal-image{
+  width: 15rem;
+  margin: 1rem;
+  object-fit: contain;
+}
+.width-fifty{
+  width: 50%;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

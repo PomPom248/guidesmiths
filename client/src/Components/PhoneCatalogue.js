@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
+import LearnMore from './LearnMore'
 export default class PhoneCatalogue extends Component {
-
     render() {
         const { phoneList } = this.props
         console.log(phoneList);
 
         return (
-            <div >
+            <div className='phone-display'>
                 {phoneList.map((phone) => {
                     return (
-                        <div key={phone._id}>
+                        <div key={phone._id} className='each-phone'>
                             <h2>{phone.model}</h2>
-                            <h3>{phone.brand}</h3>
-                            <p>{phone.dimensions.height}</p>
+                            <img src={phone.image} alt={phone.model}className='individual-image' />
+                            <LearnMore phoneInfo={phone} />
                         </div>
                     )
                 })}
@@ -20,11 +20,3 @@ export default class PhoneCatalogue extends Component {
         );
     }
 }
-
-
-// dimensions, height,width,mass
-//firstRelease
-//memory
-//model
-//battery
-//storage
