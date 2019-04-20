@@ -11,6 +11,8 @@ export default class PhoneCatalogue extends Component {
                     return (
                         <div key={phone._id}>
                             <h2>{phone.model}</h2>
+                            <h3>{phone.brand}</h3>
+                            <p>{phone.dimensions.height}</p>
                         </div>
                     )
                 })}
@@ -18,3 +20,11 @@ export default class PhoneCatalogue extends Component {
         );
     }
 }
+
+
+// dimensions, height,width,mass
+//firstRelease
+//memory
+//model
+//battery
+//storage
