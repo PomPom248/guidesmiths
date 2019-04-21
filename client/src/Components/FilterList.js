@@ -50,7 +50,6 @@ export default class FilterList extends Component {
         });
     }
 
-
     render() {
         const { phoneListCopy, queryModel, show } = this.state
         const innerHeight = (window.innerHeight - 100)
