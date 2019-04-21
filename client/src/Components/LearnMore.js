@@ -33,7 +33,7 @@ export default class LearnMore extends Component {
                             <img src={phoneInfo.image} alt={phoneInfo.model} className='modal-image' />
                         </div>
                         <div className='width-fifty'>
-                            <p><span>by:</span> {phoneInfo.brand}</p>
+                            <p><span>by</span> {phoneInfo.brand}</p>
                             <p><span>First Release:</span> {phoneInfo.firstRelease}</p>
                             <p><span>Dimensions: </span></p>
                             <ul>

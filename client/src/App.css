@@ -31,12 +31,30 @@
     transform: rotate(360deg);
   }
 }
+body{
+  /* background-image: linear-gradient(to bottom right, #d77e36, #d73646); */
+  background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.137), rgba(128, 128, 128, 0.137), rgba(255, 255, 255)); 
+}
+h1,h2,span{
+  color: #d75636;
+  font-weight: 600;
+}
+p,li{
+ /* transition: transform 0.1s; */
+}
+p:hover,li:hover{
+  transform: scale(1.2);
+  margin: 0.4rem;
+}
 .searchbox-input{
-  border: 2px solid #36D7B7;
+  border: 2px solid #d75636;
   border-radius: 5rem;
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
+}
+.searchbox-input:hover{
+  background-color: rgba(106, 207, 187, 0.075);
 }
 .phone-display{
   display: flex;
@@ -51,32 +69,37 @@
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  box-shadow: 8px 7px 15px #888888;
-  height: 17rem;
+  /* box-shadow: 8px 7px 15px #888888; */
+  height: 20rem;
+  background-color: white;
+  /* background-color: #d7563631; */
+  transition: transform .2s; 
+  border-radius: 1rem;
+}
+.each-phone:hover{
+  transform: scale(1.1);
 }
 .individual-image{
   object-fit: contain;
-  width: 30%;
+  width: 35%;
 }
 .learn-more-btn{
   border-radius: 1rem;
-  background-color: #36D7B7;
+  /* background-color: #d75636; */
+  background-image: linear-gradient(to bottom right, #d77e36, #d73646);
   color: white;
   font-size: 1.2rem;
   border: transparent;
   font-weight: 600;
   box-shadow: 5px 5px 15px #888888;
   padding: 0.3rem 1rem;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem 0.5rem;
+  transition: transform .2s; 
 }
+
 .learn-more-btn:hover{
-  background-color: white;
-  color: #36D7B7;
-  border:#36D7B7 2px solid;
+  transform: scale(1.2);
   margin: 0.4rem;
-}
-span{
-  font-weight: bold;
 }
 .flex-display{
   display: flex;
@@ -85,6 +108,10 @@ span{
 }
 .phone-name-modal{
   text-align: center;
+}
+.modal{
+  background-color: #d7563631;
+
 }
 .modal-image{
   width: 15rem;
