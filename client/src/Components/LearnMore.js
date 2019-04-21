@@ -27,13 +27,15 @@ export default class LearnMore extends Component {
                     center
                     animationDuration={1000}
                 >
-                    <h1 className='phone-name-modal'>{phoneInfo.model}</h1>
+                    <div className='flex-display-center'>
+                        <h1 className='phone-name-modal'>{phoneInfo.model}</h1>
+                        <p className='brand'> {phoneInfo.brand}</p>
+                    </div>
                     <div className='flex-display'>
                         <div className='width-fifty'>
                             <img src={phoneInfo.image} alt={phoneInfo.model} className='modal-image' />
                         </div>
                         <div className='width-fifty'>
-                            <p><span>by</span> {phoneInfo.brand}</p>
                             <p><span>First Release:</span> {phoneInfo.firstRelease}</p>
                             <p><span>Dimensions: </span></p>
                             <ul>

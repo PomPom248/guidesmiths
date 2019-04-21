@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PhoneService from '../Services/phone-service'
 import PhoneCatalogue from './PhoneCatalogue'
 import { CircleLoader } from 'react-spinners'
+import { FaSearch } from 'react-icons/fa';
+import { Fade } from 'react-reveal';
 
 export default class FilterList extends Component {
     constructor() {
@@ -9,7 +11,8 @@ export default class FilterList extends Component {
         this.state = {
             phoneList: '',
             phoneListCopy: '',
-            queryModel: ''
+            queryModel: '',
+            show: false
         }
         this.service = new PhoneService()
     }
@@ -26,7 +29,11 @@ export default class FilterList extends Component {
             .catch(e => console.log(e))
     }
 
+    showSearchBox = () => {
+        this.setState({ show: !this.state.show });
 
+
+    }
     filter = (e) => {
         e.preventDefault();
         const { name, value } = e.target;
@@ -45,26 +52,31 @@ export default class FilterList extends Component {
 
 
     render() {
-        const { phoneListCopy, queryModel } = this.state
+        const { phoneListCopy, queryModel, show } = this.state
         const innerHeight = (window.innerHeight - 100)
         return (
             <>
-                <input
-                    value={queryModel}
-                    type='text'
-                    name='modelQuery'
-                    onChange={this.filter}
-                    placeholder='Search by Model...'
-                    className='searchbox-input'
-                />
-
+                <div style={{ textAlign: 'left' }}>
+                    <button onClick={this.showSearchBox} className='searching-btn'> <FaSearch /></button>
+                    <Fade left when={show}>
+                        <input
+                            value={queryModel}
+                            type='text'
+                            name='modelQuery'
+                            onChange={this.filter}
+                            placeholder='Search by Model...'
+                            className='searchbox-input'
+                        />
+                    </Fade>
+                </div>
+                <h1 style={{ fontSize: '4rem' }}>Phone Catalogue</h1>
                 {phoneListCopy ?
                     <PhoneCatalogue phoneList={phoneListCopy} /> :
                     <div className='spinner' style={{ height: innerHeight }}>
                         <CircleLoader
                             sizeUnit={"px"}
                             size={80}
-                            color={'#36D7B7'} />
+                            color={'#d75636'} />
                     </div>
                 }
             </>

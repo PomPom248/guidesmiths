@@ -2,49 +2,18 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 body{
-  /* background-image: linear-gradient(to bottom right, #d77e36, #d73646); */
-  background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.137), rgba(128, 128, 128, 0.137), rgba(255, 255, 255)); 
+  background-image: radial-gradient(circle, rgba(255, 255, 255), rgba(128, 128, 128, 0.215), rgba(0, 0, 0, 0.215));
+
+
 }
-h1,h2,span{
-  color: #d75636;
+h1,h2{
+  color: black;
   font-weight: 600;
 }
-p,li{
- /* transition: transform 0.1s; */
-}
-p:hover,li:hover{
-  transform: scale(1.2);
-  margin: 0.4rem;
+span{
+  color: #d75636;
+  font-weight: 600;
 }
 .searchbox-input{
   border: 2px solid #d75636;
@@ -52,14 +21,25 @@ p:hover,li:hover{
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
+  transition: transform .2s; 
 }
 .searchbox-input:hover{
-  background-color: rgba(106, 207, 187, 0.075);
+  transform: scale(1.1);
+}
+.searching-btn{
+  background-image: linear-gradient(to bottom right, #d77e36, #d73646);
+  color: white;
+  font-size: 1.2rem;
+  border: transparent;
+  border-radius: 1rem;
+  margin: 1rem 0.5rem 0.5rem;
+  border-radius: 2rem;
+  padding: 0.7rem;
+
 }
 .phone-display{
   display: flex;
   flex-flow: wrap row;
-  justify-content: center;
   align-items: center;
 }
 .each-phone{
@@ -69,10 +49,8 @@ p:hover,li:hover{
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  /* box-shadow: 8px 7px 15px #888888; */
   height: 20rem;
   background-color: white;
-  /* background-color: #d7563631; */
   transition: transform .2s; 
   border-radius: 1rem;
 }
@@ -82,10 +60,21 @@ p:hover,li:hover{
 .individual-image{
   object-fit: contain;
   width: 35%;
+
 }
+.each-phone:hover>.individual-image{
+  animation-name: image-rotation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes image-rotation {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(45deg);}
+    }
+
 .learn-more-btn{
   border-radius: 1rem;
-  /* background-color: #d75636; */
   background-image: linear-gradient(to bottom right, #d77e36, #d73646);
   color: white;
   font-size: 1.2rem;
@@ -95,23 +84,34 @@ p:hover,li:hover{
   padding: 0.3rem 1rem;
   margin: 1rem 0.5rem 0.5rem;
   transition: transform .2s; 
+  z-index: 1;
 }
 
 .learn-more-btn:hover{
   transform: scale(1.2);
   margin: 0.4rem;
+  
 }
 .flex-display{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.flex-display-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .phone-name-modal{
   text-align: center;
+  margin-bottom: 0;
 }
-.modal{
-  background-color: #d7563631;
-
+.brand{
+  margin: 0;
+  color: gray;
+  font-style: italic;
+  font-size: 0.98rem;
 }
 .modal-image{
   width: 15rem;
